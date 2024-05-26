@@ -1,0 +1,21 @@
+name: Marker2Clip
+description: Converts Markers to Clips
+url: https://github.com/smegmarip/marker2clip.git
+version: 0.0.1
+exec:
+  - python
+  - "{pluginDir}/marker2clip_functions.py"
+interface: raw
+tasks:
+  - name: Convert All Markers
+    description: Convert Markers into 2 min clips
+    defaultArgs:
+      name: convertAll
+      mode: convertAll
+  - name: Custom Convert Markers
+    description: Convert markers from a scene to a clip
+    defaultArgs:
+      name: convertMarker
+      mode: convertMarker
+      scene_id: null
+      duration: 60
